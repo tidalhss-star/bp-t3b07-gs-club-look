@@ -1,213 +1,639 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>비주류 문화 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --cream-bg: #fdfdfa;
-      --charcoal-fg: #1c1a17;
-      --gold-accent: #c29d6d;
-      --hairline-color: #e6e3db;
-      --serif-font: 'Nanum Myeongjo', serif;
-      --sans-font: 'Outfit', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-raw-concrete">
+    <meta name="description" content="강서 클럽 룩북의 정수. 거리의 야성과 클럽의 광기가 만난 지점. 당신의 스타일을 무기로 삼아라. 강서구 클럽 패션의 새로운 기준을 제시하는 브루탈리즘 룩북.">
+    <meta name="keywords" content="강서 클럽 룩북, 강서 클럽 패션, 강서구 클럽, 클럽 룩북, 스트리트 패션, 브루탈리즘, 강서 나이트, 클럽 스타일">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://t3b07-gs-club-look.vercel.app/">
+    <meta property="og:title" content="강서 클럽 룩북 | 거리의 규칙을 깨라">
+    <meta property="og:description" content="강서 클럽 룩북의 정수. 거리의 야성과 클럽의 광기가 만난 지점. 당신의 스타일을 무기로 삼아라.">
+    <meta property="og:url" content="https://t3b07-gs-club-look.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.1em' fill='%23ff6b35' font-family='Impact' font-size='120' font-weight='bold'%3E룩북%3C/text%3E%3C/svg%3E">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="강서 클럽 룩북 | 거리의 규칙을 깨라">
+    <meta name="twitter:description" content="강서 클럽 룩북의 정수. 거리의 야성과 클럽의 광기가 만난 지점.">
+    <title>강서 클럽 룩북 | 거리의 규칙을 깨라</title>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "강서 클럽 룩북",
+        "url": "https://t3b07-gs-club-look.vercel.app/",
+        "description": "강서 클럽 룩북의 정수. 거리의 야성과 클럽의 광기가 만난 지점. 당신의 스타일을 무기로 삼아라.",
+        "telephone": "010-6279-0862",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "서울",
+            "addressLocality": "강서구"
+        }
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--cream-bg);
-      color: var(--charcoal-fg);
-      font-family: var(--sans-font);
-      line-height: 1.8;
-      padding: 0 40px;
-    }
-    .wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 80px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 32px;
-      margin-bottom: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    .brand {
-      font-family: var(--serif-font);
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-    }
-    nav { display: flex; gap: 32px; }
-    nav a {
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      transition: color 0.3s ease;
-    }
-    nav a:hover { color: var(--gold-accent); }
-    main { padding-bottom: 80px; }
-    .kicker {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--gold-accent);
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-family: var(--serif-font);
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.35;
-      letter-spacing: -0.02em;
-      color: var(--charcoal-fg);
-      margin-bottom: 40px;
-    }
-    .story-body {
-      font-family: var(--serif-font);
-      font-size: 1.15rem;
-      color: var(--charcoal-fg);
-      font-weight: 400;
-      text-align: justify;
-      margin-bottom: 60px;
-    }
-    .story-body p { margin-bottom: 24px; text-indent: 12px; }
-    .juice-link {
-      color: var(--gold-accent);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-accent);
-      font-weight: 700;
-      transition: all 0.3s ease;
-    }
-    .juice-link:hover {
-      color: var(--charcoal-fg);
-      border-bottom-color: var(--charcoal-fg);
-    }
-    .editorials {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 60px;
-    }
-    .editorial-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--gold-accent);
-      margin-bottom: 40px;
-    }
-    .editorial-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .editorial-block {
-      text-decoration: none;
-      color: var(--charcoal-fg);
-      display: block;
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 30px;
-    }
-    .editorial-block:hover h3 { color: var(--gold-accent); }
-    .editorial-block h3 {
-      font-family: var(--serif-font);
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      transition: color 0.3s ease;
-    }
-    .editorial-block p {
-      font-size: 0.95rem;
-      color: #555555;
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 40px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      color: #888888;
-    }
-    footer a { color: #888888; text-decoration: none; }
-    footer a:hover { color: var(--gold-accent); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 16px; }
-      h1 { font-size: 2rem; }
-      .story-body { font-size: 1.05rem; }
-    }
-  </style>
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a1a;
+            color: #e5e5e5;
+            line-height: 1.3;
+            overflow-x: hidden;
+        }
+        /* raw brutalist textures */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(0deg, rgba(255,107,53,0.02) 0px, rgba(255,107,53,0.02) 2px, transparent 2px, transparent 4px);
+            pointer-events: none;
+            z-index: 9999;
+        }
+        a {
+            color: #ff6b35;
+            text-decoration: none;
+            border-bottom: 3px solid #ff6b35;
+            transition: none;
+        }
+        a:hover {
+            background: #ff6b35;
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        /* layout */
+        .container {
+            padding: 48px;
+            max-width: none;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 24px;
+            }
+        }
+        section {
+            margin-bottom: 80px;
+        }
+        /* typography – oversized, raw */
+        h1, h2, h3 {
+            font-family: 'Impact', 'Arial Black', system-ui, sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+        h1 {
+            font-size: clamp(3.5rem, 12vw, 6rem);
+            line-height: 0.9;
+            color: #e5e5e5;
+            text-shadow: 6px 6px 0 #ff6b35;
+            transform: rotate(-2deg);
+            margin-bottom: 24px;
+        }
+        h2 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            border-left: 8px solid #ff6b35;
+            padding-left: 16px;
+            margin-bottom: 32px;
+            transform: skewX(-5deg);
+        }
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            max-width: 70ch;
+        }
+        .subhead {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ff6b35;
+            margin-bottom: 16px;
+            border: 3px solid #ff6b35;
+            display: inline-block;
+            padding: 4px 12px;
+            transform: rotate(1deg);
+        }
+        /* header */
+        header {
+            border-bottom: 4px solid #ff6b35;
+            padding-bottom: 16px;
+            margin-bottom: 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .logo {
+            font-family: 'Impact', sans-serif;
+            font-size: 2.2rem;
+            color: #ff6b35;
+            border: 4px solid #ff6b35;
+            padding: 4px 16px;
+            transform: rotate(-1deg);
+            background: #1a1a1a;
+        }
+        nav ul {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        nav a {
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border: none;
+            border-bottom: 4px solid transparent;
+            padding-bottom: 4px;
+        }
+        nav a:hover {
+            border-bottom-color: #ff6b35;
+            background: none;
+            color: #ff6b35;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: 3px solid #ff6b35;
+            padding: 8px;
+        }
+        .hamburger span {
+            display: block;
+            width: 30px;
+            height: 4px;
+            background: #ff6b35;
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 16px;
+                padding: 16px 0;
+                border-top: 3px solid #ff6b35;
+                margin-top: 16px;
+            }
+            nav ul.open {
+                display: flex;
+            }
+            header {
+                flex-wrap: wrap;
+            }
+        }
+        /* hero */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            align-items: center;
+            margin-bottom: 80px;
+            border: 4px solid #ff6b35;
+            padding: 48px;
+            background: #1a1a1a;
+            position: relative;
+        }
+        .hero::before {
+            content: '★';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 4rem;
+            color: #ff6b35;
+            transform: rotate(15deg);
+        }
+        .hero-visual {
+            background: #2a2a2a;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid #e5e5e5;
+            transform: rotate(2deg);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-visual svg {
+            width: 80%;
+            height: auto;
+        }
+        .hero-cta {
+            margin-top: 32px;
+            display: inline-block;
+            background: #ff6b35;
+            color: #1a1a1a;
+            font-weight: 900;
+            font-size: 1.5rem;
+            padding: 12px 32px;
+            border: 4px solid #e5e5e5;
+            text-transform: uppercase;
+            transform: rotate(-1deg);
+            transition: none;
+        }
+        .hero-cta:hover {
+            background: #e5e5e5;
+            color: #1a1a1a;
+            border-color: #ff6b35;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 24px;
+            }
+            .hero-visual {
+                min-height: 200px;
+            }
+        }
+        /* section blocks */
+        .block-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        .card {
+            border: 4px solid #e5e5e5;
+            padding: 32px;
+            background: #1a1a1a;
+            transform: rotate(var(--rot, 0deg));
+            transition: none;
+        }
+        .card:nth-child(odd) {
+            --rot: -1deg;
+        }
+        .card:nth-child(even) {
+            --rot: 1.5deg;
+        }
+        .card:hover {
+            border-color: #ff6b35;
+            transform: rotate(0deg) scale(1.02);
+        }
+        .card h3 {
+            border-bottom: 4px solid #ff6b35;
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+        /* review cards */
+        .review-card {
+            border: 4px solid #e5e5e5;
+            padding: 24px;
+            background: #1a1a1a;
+            position: relative;
+        }
+        .review-card::before {
+            content: '”';
+            font-size: 4rem;
+            color: #ff6b35;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-family: Impact, sans-serif;
+        }
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 16px;
+            border-top: 3px solid #ff6b35;
+            padding-top: 12px;
+            font-size: 0.9rem;
+        }
+        .stars {
+            color: #ff6b35;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+        }
+        /* footer */
+        footer {
+            border-top: 4px solid #ff6b35;
+            padding-top: 48px;
+            margin-top: 48px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+        .footer-contact {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .footer-phone {
+            font-size: 1.5rem;
+            color: #ff6b35;
+            border: 3px solid #ff6b35;
+            padding: 4px 16px;
+            display: inline-block;
+            transform: rotate(-1deg);
+        }
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            width: 100%;
+            text-align: center;
+            padding-top: 16px;
+            border-top: 2px solid #333;
+        }
+        /* utility */
+        .accent-text {
+            color: #ff6b35;
+        }
+        .brutal-border {
+            border: 4px solid #e5e5e5;
+        }
+        .skew-box {
+            transform: skewX(-3deg);
+            background: #2a2a2a;
+            padding: 16px 32px;
+            border: 4px solid #ff6b35;
+            display: inline-block;
+            margin-bottom: 32px;
+        }
+        .full-bleed {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            padding-left: 48px;
+            padding-right: 48px;
+        }
+        @media (max-width: 768px) {
+            .full-bleed {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+        }
+        /* two column split */
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+        @media (max-width: 768px) {
+            .split {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* list style */
+        ul.look-list {
+            list-style: none;
+        }
+        ul.look-list li {
+            padding: 8px 0;
+            border-bottom: 3px solid #333;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        ul.look-list li::before {
+            content: '▸ ';
+            color: #ff6b35;
+            font-weight: 900;
+        }
+        /* responsive fixes */
+        @media (max-width: 768px) {
+            h1 {
+                text-shadow: 4px 4px 0 #ff6b35;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a href="/" class="brand">EDITORIAL.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="kicker">BOUTIQUE KR / SELECTION ACCENT</div>
-      <h1>비주류 문화 지식 저널 및 아카이브</h1>
-      <div class="story-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>비주류 문화</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="editorials">
-        <div class="editorial-label">Recent Editorial Articles</div>
-        <div class="editorial-flow">
-          
-        <a href="posts/normal-1.html" class="editorial-block">
-          <h3>1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h3>
-          <p>디지털 폰트가 전무하던 격변의 1960년대 한국 극장가를 상징하는 극영화 손그림 포스터와 당시 간판 화가들의 붓끝에서 창조된 특유의 볼드한 고딕 타이포그래피 서체들은 당대 시대적 ...</p>
-        </a>
-      
+    <div class="container">
+        <header>
+            <div class="logo">강서룩북</div>
+            <nav>
+                <button class="hamburger" aria-label="메뉴 열기" onclick="document.querySelector('nav ul').classList.toggle('open')">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul>
+                    <li><a href="#">룩북</a></li>
+                    <li><a href="#">스타일</a></li>
+                    <li><a href="#">리뷰</a></li>
+                    <li><a href="tel:010-6279-0862">전화</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <a href="posts/normal-2.html" class="editorial-block">
-          <h3>전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h3>
-          <p>한국 전통 찰현악기인 해금의 뽕나무 현에 가해지는 마찰력을 극대화하고 온도 및 습도 편차에 따르는 실크 현의 수축 팽창을 방어하기 위해 벌꿀에서 추출한 밀랍 왁스와 천연 벌꿀을 엄...</p>
-        </a>
-      
+        <main>
+            <!-- HERO -->
+            <section class="hero">
+                <div>
+                    <h1>강서 클럽<br>룩북</h1>
+                    <p class="subhead">거리의 규칙을 깨라</p>
+                    <p>강서구 클럽씬을 지배하는 유일한 룩북. 당신의 스타일은 곧 무기다. 평범함은 여기서 죽는다. 오직 날것 그대로의 개성만이 살아남는다.</p>
+                    <a href="tel:010-6279-0862" class="hero-cta">☎ 지금 전화</a>
+                </div>
+                <div class="hero-visual">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="400" height="300" fill="#2a2a2a"/>
+                        <text x="50%" y="45%" text-anchor="middle" fill="#ff6b35" font-family="Impact" font-size="90" font-weight="bold" transform="rotate(-5 200 130)">룩북</text>
+                        <text x="50%" y="70%" text-anchor="middle" fill="#e5e5e5" font-family="system-ui" font-size="28" font-weight="bold">★ 강서 ★</text>
+                        <line x1="20" y1="260" x2="380" y2="260" stroke="#ff6b35" stroke-width="6"/>
+                        <line x1="20" y1="270" x2="380" y2="270" stroke="#e5e5e5" stroke-width="3"/>
+                    </svg>
+                </div>
+            </section>
 
-        <a href="posts/normal-3.html" class="editorial-block">
-          <h3>활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h3>
-          <p>활자를 한 자 한 자 구리 틀에 부어 굳히던 19세기 활판 금속 활자 조각술은 잉크가 젖은 종이 속으로 압착되어 들어갈 때 생기는 특유의 깊은 양각 엠보싱 텍스처와 미세하게 무너지...</p>
-        </a>
-      
+            <!-- STYLE PHILOSOPHY -->
+            <section>
+                <h2>왜 룩북인가</h2>
+                <div class="split">
+                    <div>
+                        <div class="skew-box">룩은 곧 태도다</div>
+                        <p>클럽은 무대다. 그리고 당신의 옷은 대본이다. 강서의 밤은 가식보다 본능을 원한다. 우리는 스트리트 브루탈리즘으로 정답을 말한다. 부드러운 건 집에 놔둬라.</p>
+                        <p>여기는 <strong class="accent-text">강서 클럽 룩북</strong>. 3px 보더, 생생한 컬러, 비대칭의 미학. 규칙은 없다. 오직 스타일만이 법이다.</p>
+                    </div>
+                    <div>
+                        <div class="skew-box">룩북 3원칙</div>
+                        <ul class="look-list">
+                            <li>원색의 폭력 – #ff6b35는 선택이 아니다. 선언이다.</li>
+                            <li>비대칭의 자유 – 균형은 지루하다. 어긋남이 움직임을 만든다.</li>
+                            <li>오버사이즈의 힘 – 3rem은 시작일 뿐. 더 크게, 더 대담하게.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-        <a href="posts/juice-1.html" class="editorial-block">
-          <h3>아날로그 문화 컬렉터들이 선정한 PBN 빌더 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
-      
+            <!-- LOOKS / GALLERY -->
+            <section>
+                <h2>🔥 시그니처 룩</h2>
+                <div class="block-grid">
+                    <div class="card">
+                        <h3>01. 콘크리트 정글</h3>
+                        <div style="background:#2a2a2a;height:150px;display:flex;align-items:center;justify-content:center;border:3px solid #ff6b35;margin-bottom:16px;">
+                            <span style="font-size:4rem;">🏗️</span>
+                        </div>
+                        <p>올블랙에 오렌지 원포인트. 거친 텍스처와 4px 실루엣. 강서 밤거리를 지배하는 기본기.</p>
+                    </div>
+                    <div class="card">
+                        <h3>02. 네온 스트라이크</h3>
+                        <div style="background:#2a2a2a;height:150px;display:flex;align-items:center;justify-content:center;border:3px solid #ff6b35;margin-bottom:16px;">
+                            <span style="font-size:4rem;">⚡</span>
+                        </div>
+                        <p>형광 시그니처. 비대칭 커팅과 레이어드. 클럽 조명 아래서 터지는 그래픽.</p>
+                    </div>
+                    <div class="card">
+                        <h3>03. 로우 블리드</h3>
+                        <div style="background:#2a2a2a;height:150px;display:flex;align-items:center;justify-content:center;border:3px solid #ff6b35;margin-bottom:16px;">
+                            <span style="font-size:4rem;">🩸</span>
+                        </div>
+                        <p>생생한 레드 디테일. 데님과 카고의 조합. 거친 듯 계산된 스트리트 룩.</p>
+                    </div>
+                </div>
+            </section>
 
-        <a href="posts/juice-2.html" class="editorial-block">
-          <h3>아날로그 문화 컬렉터들이 선정한 PBN 빌더 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
+            <!-- UGC REVIEWS -->
+            <section>
+                <h2>👊 리얼 리뷰</h2>
+                <div class="block-grid">
+                    <div class="review-card">
+                        <p>“이 룩북 보고 강서 클럽 갔는데, 입장부터 분위기 장난 아녔다. 내 스타일에 다들 주목하더라. 원칙대로 입으니까 인생 바뀜.”</p>
+                        <div class="review-meta">
+                            <span><strong>서울파이터</strong> · 2024.03.15</span>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <p>“처음엔 과하다 싶었는데, 직접 입어보니까 이게 맞다. 부드러운 건 클럽에서 죽는다. 강서 클럽 룩북은 진짜다.”</p>
+                        <div class="review-meta">
+                            <span><strong>블랙드레곤</strong> · 2024.02.28</span>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <p>“비대칭 커팅이 포인트인데, 생각보다 소화하기 쉬웠다. 오히려 평범한 옷이 더 어색하게 느껴짐. 여기 룩북 레전드.”</p>
+                        <div class="review-meta">
+                            <span><strong>올드스쿨브레이커</strong> · 2024.01.20</span>
+                            <span class="stars">★★★★☆</span>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <p>“원색에 대한 두려움을 깨줬다. #ff6b35 하나로 전체 분위기가 바뀌는 경험. 강서 클럽 룩북 아니었으면 몰랐을 거다.”</p>
+                        <div class="review-meta">
+                            <span><strong>네온러너</strong> · 2023.12.05</span>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WHY 강서 -->
+            <section>
+                <h2>왜 하필 강서인가</h2>
+                <div style="border:4px solid #e5e5e5;padding:32px;transform:rotate(0.5deg);">
+                    <p class="accent-text" style="font-size:1.8rem;font-weight:900;margin-bottom:16px;">강서는 가짜를 용납하지 않는다.</p>
+                    <p>마포나 홍대처럼 포장된 신흥 클럽씬이 아니다. 강서는 본래의 거친 에너지가 남아 있는 곳. 여기서 통하려면 진짜여야 한다. 진짜 스타일, 진짜 태도, 진짜 룩북.</p>
+                    <p><strong>강서 클럽 룩북</strong>은 그런 현장에서 탄생했다. 거리의 피드백을 그대로 디자인에 녹였다. 부드러운 건 버렸다. 오직 날것만 남았다.</p>
+                    <div style="margin-top:16px;background:#2a2a2a;padding:16px;border-left:8px solid #ff6b35;">
+                        <p style="margin:0;font-weight:700;">“룩은 증명이다. 너는 어떤 스타일로 증명할래?”</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
       
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 EDITORIAL.KR. ALL RIGHTS RESERVED.</div>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">강서 클럽 룩북 경험자에게 물어본 현실적인 판단 기준</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 제목: 창작한 제목 "아식스 젤 카야노 리스탁에서 로고 변동과 한정판 가치 변화" [POST DNA 52d6551e] #### 문장 리듬 및 구조: - **도입**: 시간과 장소가 드러나는 관찰 기록으로 시작.- **문장 리듬**: 사례 서술 뒤 한 문장 해석을</p>
       </div>
-    </footer>
+      <a href="posts/interview-002-f3li0x.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아날로그 문화 컬렉터들이 선정한 PBN 빌더 트렌드 정보 공유 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아날로그 문화 컬렉터들이 선정한 PBN 빌더 트렌드 정보 공유 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
+<footer>
+            <div>
+                <div class="logo" style="margin-bottom:16px;">강서룩북</div>
+                <p style="font-size:0.9rem;">서울 강서구 · 클럽 룩북의 기준</p>
+            </div>
+            <div class="footer-contact">
+                <p>연락은 직접 해라</p>
+                <a href="tel:010-6279-0862" class="footer-phone">010-6279-0862</a>
+            </div>
+            <div class="copyright">
+                <p>© 2024 강서 클럽 룩북 · t3b07-gs-club-look.vercel.app · 모든 디자인은 브루탈리즘 원칙에 따름</p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
