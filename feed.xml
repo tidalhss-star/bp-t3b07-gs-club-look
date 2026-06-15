@@ -5,10 +5,17 @@
   <link>https://tidalhss-star.github.io/bp-t3b07-gs-club-look</link>
   <description><![CDATA[클럽 - 강서 클럽 룩북 관련 최신 소식 및 가이드]]></description>
   <language>ko</language>
-  <pubDate>Thu, 11 Jun 2026 03:59:15 GMT</pubDate>
-  <lastBuildDate>Thu, 11 Jun 2026 03:59:15 GMT</lastBuildDate>
+  <pubDate>Mon, 15 Jun 2026 12:11:39 GMT</pubDate>
+  <lastBuildDate>Mon, 15 Jun 2026 12:11:39 GMT</lastBuildDate>
   <atom:link href="https://tidalhss-star.github.io/bp-t3b07-gs-club-look/feed.xml" rel="self" type="application/rss+xml" />
   
+    <item>
+      <title><![CDATA[창작한 제목]]></title>
+      <link>https://tidalhss-star.github.io/bp-t3b07-gs-club-look/posts/field_note-002-lq4aka.html</link>
+      <guid isPermaLink="true">https://tidalhss-star.github.io/bp-t3b07-gs-club-look/posts/field_note-002-lq4aka.html</guid>
+      <description><![CDATA[### 구체적 니치 콘텐츠 작성 #### 소제목 1: 데모 버전 vs 공식 출시 버전의 차이점 2021년 겨울, 서버실 온도가 42도까지 올라갔을 때부터 게임 개발팀은 세부적인 미공개 데이터(MGD)와 히든 요소에 주력했다. 특히 다크 소울 1편 출시 전 데모 버전에서]]></description>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title><![CDATA[강서 클럽 룩북 경험자에게 물어본 현실적인 판단 기준]]></title>
       <link>https://tidalhss-star.github.io/bp-t3b07-gs-club-look/posts/interview-002-f3li0x.html</link>
@@ -50,6 +57,13 @@
       <guid isPermaLink="true">https://tidalhss-star.github.io/bp-t3b07-gs-club-look/posts/normal-3.html</guid>
       <description><![CDATA[]]></description>
       <pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[강서 클럽 룩북 솔직 후기 — 3개월 써본 사람의 리얼 리뷰]]></title>
+      <link>https://tidalhss-star.github.io/bp-t3b07-gs-club-look/posts/review-001-lq4aka.html</link>
+      <guid isPermaLink="true">https://tidalhss-star.github.io/bp-t3b07-gs-club-look/posts/review-001-lq4aka.html</guid>
+      <description><![CDATA[### 포스트 DNA d537f72c #### 제목: 창작한 제목 | '데모 버전의 미스터리: 다크소울 1편에서 발견된 빈 공간' #### 이미지 생성 지시 아, 진짜... 게임 파일에서 발견된 미사용 무기 모델의 원래 기획 의도와 실제 배치 차이로 인해, 다크소울 1]]></description>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
     </item>
 </channel>
 </rss>
