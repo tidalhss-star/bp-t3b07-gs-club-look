@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img">
-  <metadata>BPaaS site identity 272c9825ec0dc02d</metadata>
-  <rect width="64" height="64" rx="8" fill="hsl(308 50% 44%)"/>
-  <path d="M40 0h24v64H26Z" fill="hsl(3 68% 54%)" opacity="0.82"/>
-  <g transform="rotate(331 32 32)" opacity="0.42"><circle cx="32" cy="32" r="17" fill="none" stroke="#101418" stroke-width="7"/></g>
-  <text x="32" y="39" text-anchor="middle" fill="#101418" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" letter-spacing="0">GC</text>
+  <title>강서 클럽 룩북</title>
+  <rect width="64" height="64" rx="15" fill="hsl(308 45% 36%)"/>
+  <g transform="rotate(270 32 32)"><circle cx="32" cy="32" r="17" fill="none" stroke="hsl(308 24% 96%)" stroke-width="7"/><circle cx="32" cy="32" r="7" fill="hsl(25 68% 58%)"/></g>
 </svg>
