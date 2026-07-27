@@ -4,409 +4,238 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-raw-concrete">
-    <meta name="description" content="강서 클럽 룩북의 정수. 정보는 곧 무기다. 강서구 클럽 신(scene)을 지배하는 룰, 장소, 코드를 낱낱이 해체한다. 네 스타일을 완성할 모든 것.">
-    <meta name="keywords" content="강서 클럽 룩북 정보, 강서구 클럽 정보, 강서 클럽 패션 정보, 클럽 드레스코드, 강서 나이트 정보, 클럽 입장 규정, 강서구 핫플레이스">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://t3b07-gs-club-look.vercel.app/info">
-    <meta property="og:title" content="강서 클럽 룩북 | 정보는 무기다">
-    <meta property="og:description" content="강서 클럽 룩북의 정수. 정보는 곧 무기다. 강서구 클럽 신(scene)을 지배하는 룰, 장소, 코드를 낱낱이 해체한다.">
-    <meta property="og:type" content="website">
-    <title>강서 클럽 룩북 | 정보</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Impact', 'Arial Black', 'Helvetica Neue', sans-serif;
-            background: #1a1a1a;
-            color: #e0e0e0;
-            line-height: 1.2;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.02) 2px, rgba(255,255,255,0.02) 4px);
-            pointer-events: none;
-            z-index: 9999;
-        }
-        a {
-            color: #ff4444;
-            text-decoration: none;
-            border-bottom: 2px solid #ff4444;
-            transition: all 0.1s ease;
-        }
-        a:hover {
-            color: #1a1a1a;
-            background: #ff4444;
-            border-bottom: 2px solid #1a1a1a;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            filter: grayscale(100%) contrast(1.2);
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 10px;
-            }
-        }
-        section {
-            padding: 80px 0;
-            border-bottom: 4px solid #333;
-        }
-        h1, h2, h3 {
-            text-transform: uppercase;
-            letter-spacing: -1px;
-            font-weight: 900;
-        }
-        h1 {
-            font-size: 5rem;
-            line-height: 0.9;
-            margin-bottom: 20px;
-            color: #ff4444;
-            text-shadow: 4px 4px 0 #000;
-        }
-        h2 {
-            font-size: 3.5rem;
-            margin-bottom: 30px;
-            color: #fff;
-            border-left: 8px solid #ff4444;
-            padding-left: 20px;
-        }
-        h3 {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-            color: #ccc;
-        }
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            font-family: 'Courier New', monospace;
-            line-height: 1.6;
-        }
-        .subhead {
-            font-size: 1.8rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            color: #888;
-            margin-bottom: 40px;
-            letter-spacing: 2px;
-        }
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(26,26,26,0.95);
-            z-index: 10000;
-            padding: 15px 0;
-            border-bottom: 3px solid #ff4444;
-        }
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .nav-logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: #ff4444;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-            border: none;
-        }
-        .nav-logo:hover {
-            background: none;
-            color: #ff4444;
-            border: none;
-        }
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-        .nav-links a {
-            font-size: 1.2rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 5px 10px;
-        }
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-        .hamburger span {
-            width: 30px;
-            height: 4px;
-            background: #ff4444;
-            display: block;
-        }
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background: #1a1a1a;
-                flex-direction: column;
-                padding: 20px;
-                gap: 15px;
-                border-bottom: 3px solid #ff4444;
-            }
-            .nav-links.active {
-                display: flex;
-            }
-            h1 {
-                font-size: 3rem;
-            }
-            h2 {
-                font-size: 2.2rem;
-            }
-            h3 {
-                font-size: 1.6rem;
-            }
-            .subhead {
-                font-size: 1.3rem;
-            }
-            section {
-                padding: 50px 0;
-            }
-        }
-        .tel-link {
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: #ff4444;
-            border: 3px solid #ff4444;
-            padding: 10px 20px;
-            display: inline-block;
-            margin-top: 20px;
-        }
-        .tel-link:hover {
-            background: #ff4444;
-            color: #1a1a1a;
-        }
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-        .card {
-            background: #222;
-            padding: 30px;
-            border: 3px solid #333;
-            transition: all 0.2s ease;
-        }
-        .card:hover {
-            border-color: #ff4444;
-            transform: translateY(-5px);
-        }
-        .card h3 {
-            color: #ff4444;
-            margin-bottom: 15px;
-        }
-        .card p {
-            font-size: 0.95rem;
-            color: #aaa;
-        }
-        .faq-item {
-            margin-bottom: 30px;
-            padding: 20px;
-            border-left: 4px solid #ff4444;
-            background: #222;
-        }
-        .faq-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-        .faq-item p {
-            font-size: 1rem;
-            color: #bbb;
-        }
-        .cta-block {
-            background: #111;
-            padding: 50px;
-            text-align: center;
-            border: 4px solid #ff4444;
-            margin: 40px 0;
-        }
-        .cta-block h2 {
-            border-left: none;
-            padding-left: 0;
-        }
-        .stat-row {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin: 50px 0;
-        }
-        .stat-item {
-            text-align: center;
-            flex: 1;
-            min-width: 150px;
-        }
-        .stat-number {
-            font-size: 4rem;
-            font-weight: 900;
-            color: #ff4444;
-            display: block;
-        }
-        .stat-label {
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            color: #888;
-            letter-spacing: 2px;
-        }
-        .info-highlight {
-            background: #222;
-            padding: 30px;
-            border: 3px dashed #ff4444;
-            margin: 30px 0;
-        }
-        .info-highlight p {
-            font-size: 1.3rem;
-            color: #fff;
-        }
-    </style>
+    <meta name="bpaas-design-theme" content="kr-acid-yellow">
+    <title>강서 클럽 정보 — 실무 담당자가 직접 정리한 강서 클럽 룩북 상세 분석</title>
+    <meta name="description" content="강서 클럽 룩북을 만드는 실무 담당자에게 실제 도움되는 상세 정보. 클럽별 내부 구조, 음향 시스템 차이, 주차 실태, 계약 전 확인해야 할 숨은 조건까지 파헤칩니다.">
+    <meta name="keywords" content="강서 클럽 룩, 강서 클럽 룩북, 강서 클럽 내부 정보, 강서 클럽 음향, 강서 클럽 주차, 클럽 계약 정보, 강서 클럽 상세">
+    <link rel="canonical" href="https://gangseo-club-info.mapo-room-guide.xyz/about.html">
+    <meta property="og:title" content="강서 클럽 정보 — 겉보기 스펙 말고 실제 운영 데이터로 보는 강서 클럽 룩북">
+    <meta property="og:description" content="클럽 선택은 분위기가 아니라 냉정한 정보로 판단해야 합니다. 면적 대비 실수용 인원, 음향 장비 브랜드, 주차 협약 건물까지 강서 클럽의 속사정을 공개합니다.">
+<style>
+/* t-ico-0bna */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #0a0a0a;
+    color: #e0e000;
+    font-family: 'Courier New', 'Malgun Gothic', monospace;
+    line-height: 1.7;
+    font-size: 16px;
+    padding: 2rem 1.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+    border-left: 6px solid #ccff00;
+    border-right: 6px solid #ccff00;
+    min-height: 100vh;
+}
+/* t-img-5yx7 */
+.t-img-5yx7 {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 4px solid #ccff00;
+    margin: 2rem 0;
+    filter: saturate(1.4) contrast(1.2);
+    background: #1a1a00;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #0a0a0a;
+    background-color: #ccff00;
+}
+/* q-top-ahd0 */
+.q-top-ahd0 {
+    border-top: 12px solid #ccff00;
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+}
+.v-grid-68sj {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.8rem;
+    margin: 2.2rem 0;
+}
+.v-grid-68sj > div {
+    background: #0f0f0f;
+    border: 2px solid #ccff00;
+    padding: 1.4rem;
+    transition: all 0.15s ease;
+    box-shadow: 6px 6px 0 #222;
+}
+.v-grid-68sj > div:hover {
+    background: #1a1a00;
+    border-color: #fff700;
+    transform: translate(-2px, -2px);
+    box-shadow: 10px 10px 0 #000;
+}
+.v-wrap-fit5-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin: 2rem 0;
+    justify-content: center;
+}
+.v-wrap-fit5-links a {
+    color: #0a0a0a;
+    background: #ccff00;
+    text-decoration: none;
+    padding: 0.7rem 1.6rem;
+    font-weight: bold;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.12s;
+}
+.v-wrap-fit5-links a:hover {
+    background: #000;
+    color: #ccff00;
+    border-color: #ccff00;
+}
+/* k-grid-p4q3 */
+.k-grid-p4q3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+@media (max-width: 768px) {
+    .k-grid-p4q3 {
+        grid-template-columns: 1fr;
+    }
+    body {
+        padding: 1rem;
+        border-left: 3px solid #ccff00;
+        border-right: 3px solid #ccff00;
+    }
+}
+.k-grid-p4q3 > div {
+    background: #080808;
+    border-left: 8px solid #ccff00;
+    padding: 1.3rem;
+}
+hr {
+    border: 2px dashed #ccff00;
+    margin: 2.5rem 0;
+}
+nav {
+    margin-bottom: 2.5rem;
+    background: #000;
+    padding: 1rem;
+    border-bottom: 3px solid #ccff00;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    justify-content: center;
+}
+nav a {
+    color: #ccff00;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+nav a:hover {
+    border-bottom: 2px solid #fff700;
+}
+h1, h2, h3 {
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    word-break: keep-all;
+}
+h1 {
+    font-size: 2.6rem;
+    background: #ccff00;
+    color: #000;
+    display: inline-block;
+    padding: 0.3rem 1.2rem;
+    margin-bottom: 1.5rem;
+}
+footer {
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: #888800;
+    text-align: center;
+}
+</style>
+  <meta property="og:url" content="https://gangseo-club-info.mapo-room-guide.xyz/about.html">
 </head>
 <body>
-    <nav>
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">강서클럽룩북</a>
-            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">홈</a></li>
-                <li><a href="info.html">정보</a></li>
-                <li><a href="lookbook.html">룩북</a></li>
-                <li><a href="contact.html">컨택</a></li>
-            </ul>
+
+<nav>
+    <a href="/">강서 클럽 룩</a>
+    <a href="/compare/">비교</a>
+    <a href="/info/">정보</a>
+    <a href="/guide/">가이드</a>
+</nav>
+
+<main>
+    <h1>강서 클럽 룩북 — 정보</h1>
+    <p class="t-img-5yx7">겉모습 말고 실사용 데이터</p>
+
+    <section class="q-top-ahd0">
+        <h2>공간 면적과 실수 기준, 이 차이를 모르면 틀린 견적을 받는다</h2>
+        <p>강서 지역 클럽들이 광고하는 수용 인원은 대개 '최대 법정 인원' 기준입니다. 하지만 실무에서 쓸 수 있는 실수 인원은 그 절반 이하인 경우가 많아요. 특히 클럽 내부에 바 테이블, DJ 부스, 포토존 설치 예정이라면 가용 면적이 급감합니다. 일부 업체는 전용 면적에 통로나 비상구 앞 공간까지 포함시켜 계산하는데, 이렇게 잡은 면적으로 테이블 간격을 짜면 실제 행사 당일 손님이 불편해합니다.</p>
+        <p>강서 클럽 룩북을 만들 때 반드시 평면도에 '사용 불가 구역'을 표시해달라고 요청하세요. 공기청정기 위치, 기둥, 방화 셔터 레일 아래 등 실제로 사람이 서 있거나 테이블을 놓을 수 없는 곳을 협상 전에 알아야 합니다. 또한 천장 높이가 3미터 미만인 클럽은 음향 반사가 심하고 시각적 답답함을 유발하므로 이 역시 정보 리스트에 포함시켜야 합니다.</p>
+    </section>
+
+    <div class="v-grid-68sj">
+        <div>
+            <h3>음향 장비 브랜드와 배치</h3>
+            <p>Function-One, L-Acoustics, d&b 등 메인 스피커 브랜드 유무만 확인하지 말고 서브 우퍼의 배치와 각도를 정보로 확보하세요. 강서 일부 클럽은 저음 반사가 심한 벽 구조를 가졌습니다.</p>
         </div>
-    </nav>
+        <div>
+            <h3>음료 최소 보장 금액의 함정</h3>
+            <p>테이블당 최소 음료 금액이 설정된 클럽이 많습니다. 인원이 10명 미만으로 줄 가능성이 있을 때 이 금액이 과도한지 확인하지 않으면 불필요한 지출이 발생합니다.</p>
+        </div>
+        <div>
+            <h3>주차 협약 가능 여부</h3>
+            <p>강서구 대부분 클럽은 자체 주차장이 협소합니다. 인근 유료 주차장과 사전 할인 협약이 가능한지, 혹은 발렛 파킹 비용을 클럽이 부담하는지 정보를 확보하세요.</p>
+        </div>
+    </div>
 
-    <main style="padding-top: 100px;">
-        <section>
-            <div class="container">
-                <h1>정보는 무기다</h1>
-                <p class="subhead">강서구 클럽 신을 지배하는 절대 룰</p>
-                <p>거리에서 살아남으려면 룰을 알아야 한다. 클럽도 마찬가지야. 강서구는 도심의 다른 클럽들과 달라. 여긴 가짜들은 걸러내는 시스템이 작동한다. 입장부터 퇴장까지, 네가 알아야 할 모든 정보를 여기서 해체한다.</p>
-                <p>이 정보를 무기로 삼아라. 문지기 앞에서 주저하지 말고, 드레스 코드에 긴장하지 마. 우리가 네 등짝을 밀어줄 테니까.</p>
-            </div>
-        </section>
+    <div class="k-grid-p4q3">
+        <div>
+            <h2>음향 시스템의 숨은 격차: 출력보다 배치</h2>
+            <p>강서 지역 클럽 중에는 스펙 시트에는 고출력 라인 어레이를 기재했지만, 실제 설치 각도가 댄스 플로어가 아닌 바 테이블 쪽으로 틀어져 있는 경우가 허다합니다. 이런 정보는 사전 답사 때 메인 플로어의 각 위치에서 데시벨을 측정해보지 않으면 알 수 없습니다. 특히 EDM이나 힙합 장르를 주로 틀 계획이라면 중앙부 저역 응답이 얼마나 균일한지가 핵심입니다.</p>
+            <p>또 한 가지, 대부분의 클럽은 '내부 음향 감독'이 없습니다. 외부 음향 팀이 들어오는 세팅인지, 상주 엔지니어가 조정하는지가 정보에 포함되어야 합니다. 상주 엔지니어가 없으면 당일 리허설 시간을 추가로 확보하지 못할 경우 사운드 체크가 불충분해질 위험이 있습니다. 강서 클럽 룩북에는 이 항목 반드시 기재하십시오.</p>
+        </div>
+        <div>
+            <h3>강서 클럽 주차 실태: 지도상 거리와 실제 도보 시간의 차이</h3>
+            <p>지도 앱에서 5분 거리로 보이는 주차장이 실제로는 횡단보도 대기 시간, 좁은 골목, 계단 등으로 인해 10분 이상 소요되는 경우가 빈번합니다. 강서 지역 클럽 중에는 화물 차량 진입로가 좁아 장비 반입 시 애로를 겪는 곳들도 있습니다. 이 정보를 미리 확보하지 않으면 행사 당일 하역 지연이 발생합니다.</p>
+        </div>
+    </div>
 
-        <section>
-            <div class="container">
-                <h2>강서 클럽 필수 지식</h2>
-                <div class="card-grid">
-                    <div class="card">
-                        <h3>🕐 입장 시간</h3>
-                        <p>금/토: 22:00 ~ 05:00<br>평일: 20:00 ~ 03:00<br>일요일: 휴무 (일부만 오픈)</p>
-                        <p>새벽 1시 이후 입장은 게스트 리스트 필수. 늦었다고 포기하지 마, 전화 한 통이면 끝.</p>
-                    </div>
-                    <div class="card">
-                        <h3>👕 드레스 코드</h3>
-                        <p>스니커즈 OK. 정장 NO. 가죽, 데님, 오버사이즈 실루엣 강력 추천. 운동복, 슬리퍼, 모자 미착용자는 거절당할 수 있음.</p>
-                        <p>룩북 페이지에서 추천 스타일을 참고해라.</p>
-                    </div>
-                    <div class="card">
-                        <h3>🎵 음악 장르</h3>
-                        <p>힙합/트랩 베이스. 일부 클럽은 테크노/하우스 존 운영. DJ 라인업은 매주 업데이트, 인스타 팔로우 필수.</p>
-                    </div>
-                    <div class="card">
-                        <h3>💰 입장료 & 예약</h3>
-                        <p>일반: 20,000원 (1잔 포함)<br>게스트 리스트: 사전 등록 시 무료 (네임&전화번호 필수)<br>VIP 테이블: 300,000원~ (병 서비스)</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <hr>
 
-        <section>
-            <div class="container">
-                <h2>존재 자체가 증거다</h2>
-                <div class="stat-row">
-                    <div class="stat-item">
-                        <span class="stat-number">50+</span>
-                        <span class="stat-label">클럽 & 바</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">3만</span>
-                        <span class="stat-label">주말 방문객</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">5년</span>
-                        <span class="stat-label">룩북 데이터</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">로컬 인증</span>
-                    </div>
-                </div>
-                <p>강서구는 지하철 5호선, 9호선이 지나가고, 주요 번화가인 화곡동, 등촌동, 발산역 일대에 클럽이 밀집해 있어. 택비는 기본 1만 원 선, 늦은 시간 대중교통은 끊기니까 카카오택시나 지정된 대리운전을 이용해라.</p>
-            </div>
-        </section>
+    <section>
+        <h2>계약 전 확인해야 할 문서 기반 정보 세트</h2>
+        <p>강서 클럽을 준비하는 실무 담당자가 가장 간과하는 것이 바로 '계약서 외 부속 문서'입니다. 클럽 이용약관은 대개 1장짜리 계약서와는 별도로 존재하며, 여기에는 소음 제한 시간, 화재 경보기 오작동 시 책임 소재, 장식물 부착 제한 규정 등이 포함되어 있습니다. 이 부속 문서를 사전에 요청하지 않으면 나중에 구두로 들었던 허용 사항이 모두 무효가 됩니다.</p>
+<p>또한 '연장 가능 시간'도 명확하게 정보로 남겨야 합니다. 대부분의 클럽은 새벽 3시 이후 연장이 불가능한 행정 제한을 강서구로부터 받고 있습니다. 만약 새벽 4시까지 사용 가능하다고 하는 말을 믿었다가 경영 단속이 들어오면 모든 책임은 계약자에게 돌아옵니다. 해당 클럽이 속한 구청의 영업 허가 시간을 직접 조회하는 정보 확보 단계가 필요합니다.</p>
+    </section>
 
-        <section>
-            <div class="container">
-                <h2>FAQ — 답은 이미 정해져 있다</h2>
-                <div class="faq-item">
-                    <h3>입장 거절당했어요. 왜죠?</h3>
-                    <p>룰을 무시했거나, 문지기가 널 걸러낸 거야. 가장 흔한 이유: 술 취함, 복장 불량, 분위기 깨는 행동. 다음엔 우리 룩북을 참고하고 와.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>혼자 가도 되나요?</h3>
-                    <p>당연히 돼. 오히려 혼자 오는 사람들이 더 간지 나. 바텐더랑 친해져라, 그러면 네가 단골이 되는 데 3일도 안 걸린다.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>여자/남자 게스트 리스트 따로 있나요?</h3>
-                    <p>성비 맞추는 건 옛날 방식이야. 요즘은 능력과 스타일로 승부 본다. 네 SNS가 곧 네 명함이다. 인스타 팔로워 500+면 게스트 리스트 쉽게 통과.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>클럽 내에서 싸움 났을 때?</h3>
-                    <p>절대 끼어들지 마. 경비는 즉시 출동하고, 가해자는 영구 출입 금지. 강서구 클럽들은 블랙리스트를 공유한다. 한 번 걸리면 끝이다.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>추천 클럽 3곳만 알려주세요.</h3>
-                    <p>1. 버닝썬 강서 (힙합, 대형) — 입장 난이도 중상<br>2. 클럽 M2 (테크노/하우스) — 입장 난이도 중<br>3. 더 스팟 (언더그라운드, 랩 배틀) — 입장 난이도 상 (로컬만)</p>
-                </div>
-            </div>
-        </section>
+    <div class="v-wrap-fit5-links">
+        <a href="#">강서 클럽 룩북 다운로드</a>
+        <a href="#">면적 실측 도면 요청</a>
+        <a href="#">음향 측정 리포트</a>
+        <a href="#">주차 협약 리스트</a>
+    </div>
 
-        <section>
-            <div class="container">
-                <div class="info-highlight">
-                    <p><strong>경고:</strong> 이 정보는 2025년 3월 기준이다. 클럽마다 정책이 수시로 바뀐다. 반드시 전화로 확인해라. 우리는 책임지지 않는다. 네가 직접 부딪혀라.</p>
-                </div>
-                <a href="tel:02-1234-5678" class="tel-link">📞 정보 문의: 02-1234-5678</a>
-                <p style="margin-top: 20px;">전화 한 통이면 모든 게 해결된다. 문지기에게 네 이름을 알려라. 나
+    <section>
+        <h2>분위기와 브랜드 이미지 매칭, 추상적인 정보의 정량화</h2>
+        <p>클럽의 인테리어나 조명 색온도 같은 '분위기' 정보는 주관적이라 룩북에 담기 어렵다고 생각할 수 있습니다. 그러나 이 역시 정량화할 방법이 있습니다. 조명 콘솔의 제조사 및 모델, 기본 프리셋 시나리오 개수, LED 월 패널의 조정 가능 여부는 숫자로 남길 수 있는 객관적 정보입니다. 강서 클럽 중에는 Avolite 콘솔을 보유했음에도 오퍼레이터가 상주하지 않아 프리셋만 구동하는 곳이 많습니다.</p>
+        <p>또한 클럽 내부의 벽면 마감재도 중요한 정보입니다. 노출 콘크리트, 흡음 패브리, 유리면 등은 소리 반사와 직결될 뿐만 아니라 촬영 시 빛 반사에도 영향을 미칩니다. 강서 클럽 룩북에 이 재질 정보를 포함시켜 두면 추후 행사 기획자가 조명 업체와 소통할 때 큰 도움이 됩니다.</p>
+    </section>
+</main>
+
+<footer>
+    강서 클럽 룩북 정보 페이지 | 실무자용 상세 분석 | 2025 업데이트
+</footer>
+
 </body>
 </html>
